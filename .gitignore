@@ -3,3 +3,4 @@ site/
 __pycache__/
 .pytest_cache/
 .DS_Store
+docs/spur-skills/
