@@ -9,16 +9,11 @@ family across Python, R, and Stata.
 This site documents the Becker, Boll and Voth (2026) implementation of the
 spatial unit root procedure introduced in Müller and Watson (2024).
 
-[Open the workflow guide](workflow/index.md){ .md-button .md-button--primary }
+[Read the introduction](#spatial-unit-roots){ .md-button .md-button--primary }
 [Start with spur-skills](spur-skills/index.md){ .md-button }
 </div>
 
 <div class="landing-grid">
-  <a class="surface-card" href="workflow/">
-    <span class="surface-card__label">Shared</span>
-    <h3>Workflow</h3>
-    <p>See how the SPUR and SCPC tools fit together before choosing a package.</p>
-  </a>
   <a class="surface-card" href="spur-skills/">
     <span class="surface-card__label">Setup</span>
     <h3>spur-skills</h3>
@@ -51,15 +46,41 @@ spatial unit root procedure introduced in Müller and Watson (2024).
   </a>
 </div>
 
-## How to use this site
+## Spatial unit roots
 
-<div class="note-panel" markdown="1">
+Mueller-Watson (2024) show that in many empirical settings, the decay rate of spatial dependence is so slow
+that standard techniques like HAC error corrections do not suffice to prevent spurious regression results. Drawing 
+on time-series econometrics, they call such settings `spatial unit roots` and propose and develop the spatial equivalent
+to an `I(0)` and `I(1)` unit-root tests and first-differencing transformations as solutions. 
 
-1. Start with **Workflow** if you are deciding which tool or package to use.
-2. Open a package section for installation and usage details in that language.
-3. Expect package sidecars to grow over time as released docs are added from each repo.
+Based on that, Becker, Boll, and Voth (2026) propose a simple decision tree to test for and remove this spatial dependence
+using the tools of Mueller-Watson (2024):
 
-</div>
+![Decision tree for the SPUR workflow](assets/decision-tree.png)
+
+*Decision rule from Becker, Boll, and Voth (2026), based on Müller and Watson
+(2024).*
+
+## The spur-scpc ecosystem
+
+The spur/scpc ecosystem of packages provide a simple, homogenous interface to this workflow by
+translating all the tests Mueller-Watson proposed to Stata, R, and Python. 
+
+- The SPUR packages provide the unit-root diagnostics, residual tests, half-life procedure, and spatial transformations.
+- The SCPC packages provide the inference layer developed in Müller and Watson (2022, 2023). 
+
+The core SPUR functions are:
+
+- **`I(0)` test**: tests the null that the variable is `I(0)`.
+- **`I(1)` test**: tests the null that the variable is `I(1)`.
+- **`I(0) residual` test**: applies the `I(0)` test to fitted regression residuals.
+- **`I(1) residual` test**: applies the `I(1)` test to fitted regression residuals.
+- **`spurtransform`**: applies the spatial transformation used to remove the low-frequency component.
+- **`spurhalflife`**: reports confidence sets for the spatial half-life.
+
+SCPC is a single post-estimation function: 
+
+- **`scpc()`**: applies a post-estimation correction to a fitted model
 
 ## References
 

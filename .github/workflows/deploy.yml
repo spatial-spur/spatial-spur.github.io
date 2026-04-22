@@ -11,15 +11,6 @@ on:
       - "pyproject.toml"
       - "uv.lock"
   workflow_dispatch:
-    inputs:
-      source_repo:
-        description: "Optional package repo in owner/name form"
-        required: false
-        type: string
-      source_ref:
-        description: "Optional git ref or release tag for the package docs"
-        required: false
-        type: string
 
 permissions:
   contents: read
@@ -51,15 +42,7 @@ jobs:
         run: uv sync --locked
 
       - name: Sync package docs
-        shell: bash
-        run: |
-          if [ -n "${{ github.event.inputs.source_repo }}" ] && [ -n "${{ github.event.inputs.source_ref }}" ]; then
-            uv run python scripts/sync_docs.py \
-              --source-repo "${{ github.event.inputs.source_repo }}" \
-              --source-ref "${{ github.event.inputs.source_ref }}"
-          else
-            uv run python scripts/sync_docs.py
-          fi
+        run: uv run python scripts/sync_docs.py
 
       - name: Build site
         run: uv run mkdocs build -f .build/site-src/mkdocs.yml -d "${GITHUB_WORKSPACE}/site"
