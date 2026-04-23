@@ -48,28 +48,59 @@ spatial unit root procedure introduced in Müller and Watson (2024).
 
 ## Spatial unit roots
 
-Mueller-Watson (2024) show that in many empirical settings, the decay rate of spatial dependence is so slow
+Mueller-Watson (MW) (2024) show that in many empirical settings, the decay rate of spatial dependence is so slow
 that standard techniques like HAC error corrections do not suffice to prevent spurious regression results. Drawing 
 on time-series econometrics, they call such settings `spatial unit roots` and propose and develop the spatial equivalent
 to an `I(0)` and `I(1)` unit-root tests and first-differencing transformations as solutions. 
 
-Based on that, Becker, Boll, and Voth (2026) propose a simple decision tree to test for and remove this spatial dependence
-using the tools of Mueller-Watson (2024):
+Consider the interactive example below, where we simulate, for a constant set of randomly drawn locations, two indendent spatial processes, `y` and `x`, with varying decay rates of spatial dependence. We plot the locations and realised values in the top panel, where darker colors suggest larger values. For each draw, we then run a simple regression of $y_i = \alpha + \beta x_i + \epsilon_i$ in two variants: 
 
-![Decision tree for the SPUR workflow](assets/decision-tree.png)
+  - using the drawn values and apply Conley standard errors; 
+  - applying MW's spatial differencing and SCPC inference
 
-*Decision rule from Becker, Boll, and Voth (2026), based on Müller and Watson
-(2024).*
+and plot the estimated $\hat{\beta}$ (left) and the associated p-value (right) in the bottom panel.
+
+Clearly, the estimated coefficient with vanilla OLS and Conley errors becomes significantly negative as the spatial decay rate decreases, while the SPUR & SCPC procedure correctly estimates an insignificant coefficient across the entire range.
+
+<div class="simulation-card" data-simulation-root>
+  <div class="simulation-card__header">
+    <span class="surface-card__label">Interactive demo</span>
+  </div>
+  <div class="simulation-card__viewport">
+    <img
+      class="simulation-card__image"
+      data-simulation-image
+      src="assets/simulation/frame_000.webp"
+      alt="Simulation frame 0"
+    >
+  </div>
+  <input
+    class="simulation-card__slider"
+    data-simulation-slider
+    type="range"
+    min="0"
+    max="99"
+    step="1"
+    value="0"
+    aria-label="Simulation frame"
+  >
+  <div class="simulation-card__scale">
+    <span>low</span>
+    <span>high</span>
+  </div>
+  <div class="simulation-card__axis-label">spatial dependence</div>
+</div>
+
 
 ## The spur-scpc ecosystem
 
-The spur/scpc ecosystem of packages provide a simple, homogenous interface to this workflow by
-translating all the tests Mueller-Watson proposed to Stata, R, and Python. 
+The spur/scpc ecosystem of packages provide a simple, homogenous interface to these methods by
+translating all the tests Mueller-Watson developed to Stata, R, and Python. 
 
 - The SPUR packages provide the unit-root diagnostics, residual tests, half-life procedure, and spatial transformations.
 - The SCPC packages provide the inference layer developed in Müller and Watson (2022, 2023). 
 
-The core SPUR functions are:
+The core SPUR functions all packages implement are:
 
 - **`I(0)` test**: tests the null that the variable is `I(0)`.
 - **`I(1)` test**: tests the null that the variable is `I(1)`.
