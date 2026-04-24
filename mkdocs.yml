@@ -5,6 +5,8 @@ repo_name: spatial-spur/spatial-spur.github.io
 
 theme:
   name: material
+  logo: assets/logos/spur-square-viridis-spatial-v12-voronoi.png
+  favicon: assets/logos/spur-square-viridis-spatial-v12-voronoi.png
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
