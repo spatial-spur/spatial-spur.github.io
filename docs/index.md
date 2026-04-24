@@ -55,12 +55,12 @@ to an `I(0)` and `I(1)` unit-root tests and first-differencing transformations a
 
 Consider the interactive example below, where we simulate, for a constant set of randomly drawn locations, two indendent spatial processes, `y` and `x`, with varying decay rates of spatial dependence. We plot the locations and realised values in the top panel, where darker colors suggest larger values. For each draw, we then run a simple regression of $y_i = \alpha + \beta x_i + \epsilon_i$ in two variants: 
 
-  - using the drawn values untransformed and applying Conley standard errors; 
-  - transforming the drawn values using MW's spatial differencing technique and applying SCPC inference
+  - using vanilla OLS with Conley standard errors; 
+  - applying MW's spatial differencing technique and SCPC inference
 
 and plot the estimated $\hat{\beta}$ (left) and the associated p-value (right) in the bottom panel.
 
-Clearly, the estimated coefficient with vanilla OLS and Conley errors (red line) becomes significantly negative as the spatial decay rate decreases, while the SPUR & SCPC procedure (blue line) correctly estimates an insignificant coefficient throughout.
+Clearly, in this example, as the decay-rate of spatial dependence decreases, vanilla OLS and Conley errors (red line) begin to spuriously estimate a negative relationship between `x` and `y`. In contrast, the SPUR & SCPC procedure (blue line) correctly estimates an insignificant coefficient close to the true $\beta$ (zero) throughout.
 
 <div class="simulation-card" data-simulation-root>
   <div class="simulation-card__header">
