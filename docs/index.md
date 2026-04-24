@@ -48,7 +48,7 @@ spatial unit root procedure introduced in Müller and Watson (2024).
 
 ## Quick start
 
-To get started, just point your favorite coding-agent at the installation guide:
+To get started, just point your favorite coding-agent at the [spur-skills](spur-skills/index.md) installation instructions:
 
 ```bash
 codex --dangerously-bypass-approvals-and-sandbox "Install spur-skills by following https://github.com/spatial-spur/spur-skills#install, then inspect the spatial-analysis skill and provide the user with a very short two-section overview: 1) how to apply the spur procedure using the spur() Python wrapper as minimal example, 2) an itemized list of what the applied tests actually do. focus on clarity and brevity"
