@@ -46,6 +46,20 @@ spatial unit root procedure introduced in Müller and Watson (2024).
   </a>
 </div>
 
+## Quick start
+
+To get started, just point your favorite coding-agent at the installation guide:
+
+```bash
+codex --dangerously-bypass-approvals-and-sandbox "Install spur-skills by following https://github.com/spatial-spur/spur-skills#install, then inspect the spatial-analysis skill and provide the user with a very short two-section overview: 1) how to apply the spur procedure using the spur() Python wrapper as minimal example, 2) an itemized list of what the applied tests actually do. focus on clarity and brevity"
+```
+
+```bash
+claude --dangerously-skip-permissions "Install spur-skills by following https://github.com/spatial-spur/spur-skills#install, then inspect the spatial-analysis skill and provide the user with a very short two-section overview: 1) how to apply the spur procedure using the spur() Python wrapper as minimal example, 2) an itemized list of what the applied tests actually do. focus on clarity and brevity"
+```
+
+[spur-skills](spur-skills/index.md) give your agent all relevant context on the ecosystem. After installation, ask your agent anything spur-related and it should know where to find the answer. 
+
 ## Spatial unit roots
 
 Mueller-Watson (MW) (2024) show that in many empirical settings, the decay rate of spatial dependence is so slow
