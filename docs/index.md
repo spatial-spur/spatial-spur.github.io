@@ -6,7 +6,7 @@
 `spatial-spur` is the shared documentation hub for the SPUR and SCPC package
 family across Python, R, and Stata.
 
-This site documents the Becker et al. 2026 implementation of the
+This site documents the Becker, Boll and Voth 2026 implementation of the
 spatial unit root procedure introduced in Müller & Watson 2024.
 
 [Read the introduction](#spatial-unit-roots){ .md-button .md-button--primary }
