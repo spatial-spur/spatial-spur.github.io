@@ -127,14 +127,6 @@ SCPC is a single post-estimation function:
 
 - **`scpc()`**: applies a post-estimation correction to a fitted model
 
-## Citation
-
-- SPUR packages: cite Becker et al. 2026 and Müller & Watson 2024. Copy BibTeX entries (`bbv2026`, `mw2024`) from [CITATION.bib](https://github.com/spatial-spur/spur-python/blob/main/CITATION.bib); structured metadata is in [CITATION.cff](https://github.com/spatial-spur/spur-python/blob/main/CITATION.cff).
-- SCPC packages: cite Becker et al. 2026, Müller & Watson 2022, and Müller & Watson 2023. Copy BibTeX entries (`bbv2026`, `mw2022`, `mw2023`) from [CITATION.bib](https://github.com/spatial-spur/scpc-python/blob/main/CITATION.bib); structured metadata is in [CITATION.cff](https://github.com/spatial-spur/scpc-python/blob/main/CITATION.cff).
-- `spur-skills`: cite Becker et al. 2026. Copy the BibTeX entry (`bbv2026`) from [CITATION.bib](https://github.com/spatial-spur/spur-skills/blob/main/CITATION.bib); structured metadata is in [CITATION.cff](https://github.com/spatial-spur/spur-skills/blob/main/CITATION.cff).
-
-Use `CITATION.bib` for LaTeX/BibTeX handles and `CITATION.cff` for structured metadata.
-
 ## References
 
 - Becker, Sascha O., P. David Boll, and Hans-Joachim Voth (2026). “Testing and Correcting for Spatial Unit Roots in Regression Analysis.” *The Stata Journal*, forthcoming. [Accepted version](https://pauldavidboll.com/SPUR_Stata_Journal_website.pdf).
