@@ -137,7 +137,7 @@ See the linked `CITATION.cff` files for copyable citation metadata.
 
 ## References
 
-- Becker, Sascha O., P. David Boll, and Hans-Joachim Voth (2026). “Testing and Correcting for Spatial Unit Roots in Regression Analysis.” *The Stata Journal*, in press.
+- Becker, Sascha O., P. David Boll, and Hans-Joachim Voth (2026). “Testing and Correcting for Spatial Unit Roots in Regression Analysis.” *The Stata Journal*, forthcoming.
 - Müller, Ulrich K., and Mark W. Watson (2024). “Spatial Unit Roots and Spurious Regression.” *Econometrica* 92(5): 1661–1695. doi:10.3982/ECTA21654.
 - Müller, Ulrich K., and Mark W. Watson (2022). “Spatial Correlation Robust Inference.” *Econometrica* 90(6): 2901–2935. doi:10.3982/ECTA19465.
 - Müller, Ulrich K., and Mark W. Watson (2023). “Spatial Correlation Robust Inference in Linear Regression and Panel Models.” *Journal of Business & Economic Statistics* 41(4): 1050–1064. doi:10.1080/07350015.2022.2127737.
