@@ -6,8 +6,8 @@
 `spatial-spur` is the shared documentation hub for the SPUR and SCPC package
 family across Python, R, and Stata.
 
-This site documents the Becker, Boll and Voth (2026) implementation of the
-spatial unit root procedure introduced in Müller and Watson (2024).
+This site documents the Becker et al. 2026 implementation of the
+spatial unit root procedure introduced in Müller & Watson 2024.
 
 [Read the introduction](#spatial-unit-roots){ .md-button .md-button--primary }
 [Start with spur-skills](spur-skills/index.md){ .md-button }
@@ -62,7 +62,7 @@ claude --dangerously-skip-permissions "Install spur-skills by following https://
 
 ## Spatial unit roots
 
-Mueller-Watson (MW) (2024) show that in many empirical settings, the decay rate of spatial dependence is so slow
+Müller & Watson 2024 show that in many empirical settings, the decay rate of spatial dependence is so slow
 that standard techniques like HAC error corrections do not suffice to prevent spurious regression results. Drawing 
 on time-series econometrics, they call such settings `spatial unit roots` and propose and develop the spatial equivalent
 to an `I(0)` and `I(1)` unit-root tests and first-differencing transformations as solutions. 
@@ -70,7 +70,7 @@ to an `I(0)` and `I(1)` unit-root tests and first-differencing transformations a
 Consider the interactive example below, where we simulate, for a constant set of randomly drawn locations, two indendent spatial processes, `y` and `x`, with varying decay rates of spatial dependence. We plot the locations and realised values in the top panel, where darker colors suggest larger values. For each draw, we then run a simple regression of $y_i = \alpha + \beta x_i + \epsilon_i$ in two variants: 
 
   - using vanilla OLS with Conley standard errors; 
-  - applying MW's spatial differencing technique and SCPC inference
+  - applying the spatial differencing technique from Müller & Watson 2024 and SCPC inference
 
 and plot the estimated $\hat{\beta}$ (left) and the associated p-value (right) in the bottom panel.
 
@@ -109,10 +109,10 @@ Clearly, in this example, as the decay-rate of spatial dependence decreases, van
 ## The spur-scpc ecosystem
 
 The spur/scpc ecosystem of packages provide a simple, homogenous interface to these methods by
-translating all the tests Mueller-Watson developed to Stata, R, and Python. 
+translating the Müller & Watson tests to Stata, R, and Python. 
 
 - The SPUR packages provide the unit-root diagnostics, residual tests, half-life procedure, and spatial transformations.
-- The SCPC packages provide the inference layer developed in Müller and Watson (2022, 2023). 
+- The SCPC packages provide the inference layer developed in Müller & Watson 2022 and Müller & Watson 2023. 
 
 The core SPUR functions all packages implement are:
 
@@ -129,11 +129,11 @@ SCPC is a single post-estimation function:
 
 ## Citation
 
-- SPUR packages: cite `bbv2026` and `mw2024`; see the [SPUR package citation metadata](https://github.com/spatial-spur/spur-python/blob/main/CITATION.cff).
-- SCPC packages: cite `bbv2026`, `mw2022`, and `mw2023`; see the [SCPC package citation metadata](https://github.com/spatial-spur/scpc-python/blob/main/CITATION.cff).
-- `spur-skills`: cite `bbv2026`; see the [`spur-skills` citation metadata](https://github.com/spatial-spur/spur-skills/blob/main/CITATION.cff).
+- SPUR packages: cite Becker et al. 2026 and Müller & Watson 2024. Copy BibTeX entries (`bbv2026`, `mw2024`) from [CITATION.bib](https://github.com/spatial-spur/spur-python/blob/main/CITATION.bib); structured metadata is in [CITATION.cff](https://github.com/spatial-spur/spur-python/blob/main/CITATION.cff).
+- SCPC packages: cite Becker et al. 2026, Müller & Watson 2022, and Müller & Watson 2023. Copy BibTeX entries (`bbv2026`, `mw2022`, `mw2023`) from [CITATION.bib](https://github.com/spatial-spur/scpc-python/blob/main/CITATION.bib); structured metadata is in [CITATION.cff](https://github.com/spatial-spur/scpc-python/blob/main/CITATION.cff).
+- `spur-skills`: cite Becker et al. 2026. Copy the BibTeX entry (`bbv2026`) from [CITATION.bib](https://github.com/spatial-spur/spur-skills/blob/main/CITATION.bib); structured metadata is in [CITATION.cff](https://github.com/spatial-spur/spur-skills/blob/main/CITATION.cff).
 
-See the linked `CITATION.cff` files for copyable citation metadata.
+Use `CITATION.bib` for LaTeX/BibTeX handles and `CITATION.cff` for structured metadata.
 
 ## References
 
