@@ -127,8 +127,17 @@ SCPC is a single post-estimation function:
 
 - **`scpc()`**: applies a post-estimation correction to a fitted model
 
+## Citation
+
+- SPUR packages: cite [Becker et al. 2026](https://github.com/spatial-spur/spur-python/blob/main/CITATION.cff) and [Müller & Watson 2024](https://github.com/spatial-spur/spur-python/blob/main/CITATION.cff).
+- SCPC packages: cite [Becker et al. 2026](https://github.com/spatial-spur/scpc-python/blob/main/CITATION.cff), [Müller & Watson 2022](https://github.com/spatial-spur/scpc-python/blob/main/CITATION.cff), and [Müller & Watson 2023](https://github.com/spatial-spur/scpc-python/blob/main/CITATION.cff).
+- `spur-skills`: cite [Becker et al. 2026](https://github.com/spatial-spur/spur-skills/blob/main/CITATION.cff).
+
+See the linked `CITATION.cff` files for copyable citation metadata.
+
 ## References
 
-- Becker, Sascha O., P. David Boll, and Hans-Joachim Voth (2026). “Testing and Correcting for Spatial Unit Roots in Regression Analysis.” *Stata Journal*, forthcoming.
-- Müller, Ulrich K., and Mark W. Watson (2024). “Spatial Unit Roots and Spurious Regression.” *Econometrica* 92(5): 1661–1695.
-- Müller, Ulrich. K., and Mark W. Watson (2023), Spatial Correlation Robust Inference in Linear Regression, *Journal of Business & Economic Statistics*.
+- Becker, Sascha O., P. David Boll, and Hans-Joachim Voth (2026). “Testing and Correcting for Spatial Unit Roots in Regression Analysis.” *The Stata Journal*, in press.
+- Müller, Ulrich K., and Mark W. Watson (2024). “Spatial Unit Roots and Spurious Regression.” *Econometrica* 92(5): 1661–1695. doi:10.3982/ECTA21654.
+- Müller, Ulrich K., and Mark W. Watson (2022). “Spatial Correlation Robust Inference.” *Econometrica* 90(6): 2901–2935. doi:10.3982/ECTA19465.
+- Müller, Ulrich K., and Mark W. Watson (2023). “Spatial Correlation Robust Inference in Linear Regression and Panel Models.” *Journal of Business & Economic Statistics* 41(4): 1050–1064. doi:10.1080/07350015.2022.2127737.
