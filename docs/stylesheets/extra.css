@@ -178,6 +178,31 @@ body[data-md-color-scheme="slate"] .note-panel li {
   color: rgba(226, 232, 240, 0.86);
 }
 
+.package-overview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 0 1rem;
+}
+
+.package-overview-header h1 {
+  margin: 0;
+}
+
+.package-overview-header .md-button {
+  margin: 0;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 44rem) {
+  .package-overview-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+}
+
 .simulation-card {
   max-width: 46rem;
   margin: 1rem auto 1.15rem;
