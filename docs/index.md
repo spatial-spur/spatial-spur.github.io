@@ -129,7 +129,7 @@ SCPC is a single post-estimation function:
 
 ## References
 
-- Becker, Sascha O., P. David Boll, and Hans-Joachim Voth (2026). “Testing and Correcting for Spatial Unit Roots in Regression Analysis.” *The Stata Journal*, forthcoming. [Accepted version](https://pauldavidboll.com/SPUR_Stata_Journal_website.pdf).
+- Becker, Sascha O., P. David Boll, and Hans-Joachim Voth (2026). “Testing and Correcting for Spatial Unit Roots in Regression Analysis.” *The Stata Journal* 26(2): 177–202. [https://doi.org/10.1177/1536867X261449932](https://journals.sagepub.com/doi/10.1177/1536867X261449932).
 - Müller, Ulrich K., and Mark W. Watson (2024). “Spatial Unit Roots and Spurious Regression.” *Econometrica* 92(5): 1661–1695. doi:10.3982/ECTA21654.
 - Müller, Ulrich K., and Mark W. Watson (2022). “Spatial Correlation Robust Inference.” *Econometrica* 90(6): 2901–2935. doi:10.3982/ECTA19465.
 - Müller, Ulrich K., and Mark W. Watson (2023). “Spatial Correlation Robust Inference in Linear Regression and Panel Models.” *Journal of Business & Economic Statistics* 41(4): 1050–1064. doi:10.1080/07350015.2022.2127737.
